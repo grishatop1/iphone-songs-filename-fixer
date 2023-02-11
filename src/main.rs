@@ -15,6 +15,8 @@ fn main() {
 
     fs::create_dir_all(path.parent().unwrap().join("output")).unwrap();
 
+    println!("{}", "Working...".green());
+
     for entry in path.read_dir().unwrap() {
         let song_path = entry.unwrap().path();
 
